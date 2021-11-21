@@ -2,7 +2,7 @@ mybatisGenerator:
   datasource:
     type: mysql
     address: localhost:3306
-    db: test
+    db: test?serverTimezone=GMT
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     password: 123456

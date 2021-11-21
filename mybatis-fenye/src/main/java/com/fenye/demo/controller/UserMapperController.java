@@ -3,6 +3,7 @@ package com.fenye.demo.controller;
 import com.fenye.demo.model.User;
 import com.fenye.demo.service.UserService;
 import com.fenye.demo.util.VerifyUtils;
+import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import org.apache.ibatis.annotations.Param;

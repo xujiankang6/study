@@ -1,13 +1,11 @@
 package com.example.demo.controller;
 
-import com.example.demo.mapper.TestMapper;
 import com.example.demo.model.User;
 import com.example.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -26,19 +24,16 @@ public class UserMapperController {
     private UserService userService;
 
 
-
-
     @RequestMapping("/getuser/{uid}")
     @ResponseBody
-    public User getUser(@PathVariable String uid){
-        return userService.selectByPrimaryKey(Integer.valueOf(uid));
+    public User getUser(@PathVariable String uid) {
+        return userService.selectByPrimaryKey(Integer.valueOf(uid)).get();
     }
-
 
 
     @RequestMapping("all")
     @ResponseBody
-    public List<User> getAllUser(){
+    public List<User> getAllUser() {
         return userService.selectUser();
     }
 

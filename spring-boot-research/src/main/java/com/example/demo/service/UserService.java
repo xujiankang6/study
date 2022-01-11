@@ -4,6 +4,7 @@ import com.example.demo.model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * UserService
@@ -20,7 +21,7 @@ public interface UserService {
 
     int insertSelective(User record);
 
-    User selectByPrimaryKey(Integer uid);
+    Optional<User> selectByPrimaryKey(Integer uid);
 
     int updateByPrimaryKeySelective(User record);
 

@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * UserServiceImpl
@@ -40,7 +41,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User selectByPrimaryKey(Integer uid) {
+    public Optional<User> selectByPrimaryKey(Integer uid) {
         return userMapper.selectByPrimaryKey(uid);
     }
 
